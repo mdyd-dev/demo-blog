@@ -5,11 +5,12 @@ Welcome the demo-blog repository. You will find here the source code for screenc
 
 ## List of Episodes
 
-1. Intoroduction to presentation layer - pages, partials, layouts.
+1. Intoroduction to presentation layer - pages, partials and layouts.
 2. Persisting and fetching data - model schemas, forms and graphqls
 3. (Planned) Making things beauty - handling assets
 4. (Planned) Access control - users and authorization policies
 5. (Planned) Dynamic assets - image and file upload
 6. (Planned) QA - automated tests
-7. (Planned) Module creation
+7. (Planned) Adding content - migrations
+8. (Planned) Module creation
 
