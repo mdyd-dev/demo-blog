@@ -1,6 +1,6 @@
 ## Demo Blog
 
-Welcome the demo-blog repository. You will find here the source code for screencasting sessions explaing how to build blog on platformOS.
+Welcome the demo-blog repository. You will find here the source code for screencasting sessions explaing how to build blog on platformOS. Each of the epside is finished with dedicated tag release so that you can browse through every development stage.
 
 
 # List of Episodes
