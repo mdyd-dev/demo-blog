@@ -3,3 +3,8 @@ slug: /
 layout_name: application
 ---
 <h1>Welcome to the blog.</h1>
+
+{% graphql g_posts = "get_posts" %}
+{% include "posts/post" with g_posts.models.results %}
+
+{% include_form "post_form" %}

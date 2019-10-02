@@ -1,0 +1,43 @@
+---
+name: post_form
+resource: post
+fields:
+  properties: 
+    title:
+      validation: 
+        presence: true
+        unique: true
+    content:
+      validation: 
+        presence: true
+    author:
+      validation: 
+        presence: true
+    slug:
+      validation: 
+        presence: true
+default_payload: >
+  {% if form %}
+    {
+      "properties_attributes": {
+        "slug": "{{ params.properties_attributes.title | slugify }}"
+      }
+    }
+  {% endif %}
+---
+{% form %}
+  {% assign p = form.fields.properties %}
+  <p>
+    <label for="title">Title</label>
+    <input type="text" name="{{ p.title.name }}" id="title" value="{{ p.title.value }}">
+  </p>
+  <p>
+    <label for="content">Content</label>
+    <textarea type="text" name="{{ p.content.name }}" id="content">{{ p.content.value }}</textarea>
+  </p>
+  <p>
+    <label for="author">Author</label>
+    <input type="text" name="{{ p.author.name }}" id="author" value="{{ p.author.value }}">
+  </p>
+  <button type="submit">Save</button>
+{% endform %}

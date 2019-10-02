@@ -1,0 +1,21 @@
+query get_posts($slug: String) {
+  models(
+    per_page:10
+    filter: {
+      name: {
+        exact: "post"
+      }
+      properties: [
+        { name: "slug", value: $slug}
+      ]
+    }
+  ) {
+    results {
+      id
+      title:property(name: "title")
+      content:property(name: "content")
+      slug:property(name: "slug")
+      author:property(name: "author")
+    }
+  }
+}

@@ -1,0 +1,10 @@
+name: post
+properties:
+- name: title
+  type: string
+- name: content
+  type: text
+- name: slug
+  type: string
+- name: author
+  type: string
